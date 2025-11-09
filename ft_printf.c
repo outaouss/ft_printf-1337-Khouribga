@@ -61,8 +61,7 @@ int	ft_printf(const char *format, ...)
 			i++;
 		}
 		else
-			printed_count += ft_putchar(format[i]);
-		i++;
+			printed_count += ft_putchar(format[i++]);
 	}
 	va_end(args);
 	return (printed_count);
