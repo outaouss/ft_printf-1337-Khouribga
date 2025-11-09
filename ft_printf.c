@@ -6,7 +6,7 @@
 /*   By: outaouss <outaouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 16:00:25 by outaouss          #+#    #+#             */
-/*   Updated: 2025/11/05 00:35:35 by outaouss         ###   ########.fr       */
+/*   Updated: 2025/11/06 22:25:18 by outaouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,20 +48,21 @@ int	ft_printf(const char *format, ...)
 	i = 0;
 	printed_count = 0;
 	va_start(args, format);
+	if (!format || write(1, "", 0) < 0)
+		return (-1);
 	while (format[i] != '\0')
 	{
-		if (write(1, "", 0) < 0)
-			return (-1);
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '\0')
+				return (-1);
 			i++;
-			if (format[i] == '\0')
-				return (printed_count);
 			printed_count += format_checker(args, format[i]);
 			i++;
 		}
 		else
-			printed_count += write(1, &format[i++], 1);
+			printed_count += ft_putchar(format[i]);
+		i++;
 	}
 	va_end(args);
 	return (printed_count);

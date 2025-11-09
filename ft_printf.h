@@ -6,17 +6,15 @@
 /*   By: outaouss <outaouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 18:06:04 by outaouss          #+#    #+#             */
-/*   Updated: 2025/11/05 00:27:31 by outaouss         ###   ########.fr       */
+/*   Updated: 2025/11/07 15:35:34 by outaouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stddef.h>
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdio.h>
 
 int	ft_putchar(char c);
 int	ft_putstr(char *str);
