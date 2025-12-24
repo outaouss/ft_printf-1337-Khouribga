@@ -1,3 +1,5 @@
+## FT_PRINTF— 42 Project
+
 🛠️ ft_printf: Custom C Variadic Function Implementation
 This project is a comprehensive recreation of the standard C library function printf(). Developed as part of the 42 curriculum, ft_printf is designed to handle variable arguments, custom format specifiers, and robust error management.
 
